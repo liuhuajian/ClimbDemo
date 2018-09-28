@@ -18,7 +18,7 @@ public class ClimbControl {
         List<JdModel> bookdatas=URLFecter.URLParser(client, url);
         //循环输出抓取的数据
         for (JdModel jd:bookdatas) {
-            logger.info("bookID:"+jd.getBookID()+"\t"+"bookPrice:"+jd.getBookPrice()+"\t"+"bookName:"+jd.getBookName());
+            logger.info("bookID:"+jd.getBookID()+"\t"+"bookPrice:"+jd.getBookPrice()+"\t"+"bookName:"+jd.getBookName()+"\t"+"bookUrl:"+jd.getBookDetailUrl());
         }
         //将抓取的数据插入数据库
 //        MYSQLControl.executeInsert(bookdatas);

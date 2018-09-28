@@ -19,12 +19,14 @@ public class JdParse {
             String bookID=ele.attr("data-sku");
             String bookPrice=ele.select("div[class=p-price]").select("strong").select("i").text();
             String bookName=ele.select("div[class=p-name]").select("em").text();
+            String bookDetailUrl = ele.select("div[class=p-img]").select("a").attr("href");
             //创建一个对象，这里可以看出，使用Model的优势，直接进行封装
             JdModel jdModel=new JdModel();
             //对象的值
             jdModel.setBookID(bookID);
             jdModel.setBookName(bookName);
             jdModel.setBookPrice(bookPrice);
+            jdModel.setBookDetailUrl(bookDetailUrl);
             //将每一个对象的值，保存到List集合中
             data.add(jdModel);
         }

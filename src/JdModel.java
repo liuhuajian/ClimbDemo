@@ -3,6 +3,7 @@ public class JdModel {
     private String bookID;
     private String bookName;
     private String bookPrice;
+    private String bookDetailUrl;
     public String getBookID() {
         return bookID;
     }
@@ -21,5 +22,11 @@ public class JdModel {
     public void setBookPrice(String bookPrice) {
         this.bookPrice = bookPrice;
     }
+	public String getBookDetailUrl() {
+		return bookDetailUrl;
+	}
+	public void setBookDetailUrl(String bookDetailUrl) {
+		this.bookDetailUrl = bookDetailUrl;
+	}
 
 }
